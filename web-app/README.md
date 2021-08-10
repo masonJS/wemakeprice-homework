@@ -1,6 +1,8 @@
 # web-app
 
-## Project setup
+This project Homework wep application.
+
+### Installation
 ```
 npm install
 ```
