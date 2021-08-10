@@ -10,7 +10,7 @@ module.exports = (app) => {
 
   route.post('/',
     validator(homeworkSchema.POST),
-    asyncHandler(async (req, res, next) => {
+    asyncHandler(async (req, res) => {
       logger.debug('post homework api', req.body)
       const { url, type, amount } = req.body
       const result = await homeworkService.getHomeworkData(url, type, amount)

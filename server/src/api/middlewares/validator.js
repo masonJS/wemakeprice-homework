@@ -5,12 +5,13 @@ module.exports = (schema) => {
     const { error } = schema.validate(req.body, { convert: false });
     const valid = error == null;
 
-    if (valid) {
+    if(valid) {
       next();
     } else {
       const { details } = error;
       const message = details.map(i => i.message).join(',');
       logger.error(message)
-      res.status(422).json({ error: message }) }
+      res.status(400).json({ error: message })
+    }
   }
 };

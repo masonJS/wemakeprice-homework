@@ -8,5 +8,6 @@ module.exports =  {
   },
   api: {
     prefix: '/api'
-  }
+  },
+  corsUrl: 'http://localhost:8080'
 }
